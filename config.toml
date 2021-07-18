@@ -1,0 +1,68 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Kara Dietz"
+theme = "show"
+
+[params]
+  # name = "Showfolio Theme"
+  # description = "Modern portfolio theme for your Hugo site."
+  author = "Kara Dietz"
+  authorEmail = "kmdietz@uwaterloo.ca"
+  authorImage = "/Kara_Dietz_profile.png"
+  autoDarkMode = true
+
+  copyright = "Copyright © 2021 - John Doe · All rights reserved"
+  favicon = "favicon.ico"
+
+[params.homepage]
+  title = "Hey 👋 I'm Kara Dietz"
+  # tagline = "UX Designer and Product Lead"
+  description = "I'm a fourth year Software Engineering Student at the University of Waterloo."
+  description2 = "I specialize in backend and infrastructure software engineering, and am constantly on the lookout for new opportunities to grow my experiences and meet new people. Connect with me!"
+  # contact = "https://twitter.com/"
+
+[[params.homepage.projects]]
+  link = "https://github.com/karadietz/DailyChessPro"
+  name = "DailyChessPro"
+  image = "daily_chess_pro.png"
+  description = "Facebook messenger bot sending subscribed users daily chess puzzles."
+
+[[params.homepage.projects]]
+  link = "https://github.com/karadietz/Ballerinify"
+  name = "Ballerinify"
+  image = "ballerinify.png"
+  description = "iOS app using ML to identify ballet positions of users."
+
+#[params.homepage.resume]
+#   = ["Visual Design", "Product Development"]
+
+[[params.homepage.resume.work]]
+  name = "Shopify"
+  role = "Backend Developer Intern"
+  duration = "May 2021 - Aug 2021"
+
+[[params.homepage.resume.work]]
+  name = "Shopify"
+  role = "Production Engineer Intern"
+  duration = "Sept 2020 - Dec 2020"
+
+[[params.homepage.resume.work]]
+  name = "Capital One"
+  role = "Software Engineering Intern"
+  duration = "Jan 2020 - Apr 2020"
+
+[[params.homepage.resume.work]]
+  name = "OpenText"
+  role = "Software Developer Intern"
+  duration = "May 2019 - Aug 2019"
+
+# [[params.homepage.resume.courses]]
+#   name = "Course Name"
+#   provider = "UX Academy"
+#   duration = "Nov 2019 - Jan 2020"
+
+[params.homepage.social]
+  linkedin = "https://www.linkedin.com/in/kara-dietz/"
+  github = "https://github.com/karadietz"
+  resume = "Kara_Dietz_Resume_F2020.pdf"
+  email = "mailto:kmdietz@uwaterloo.ca"
