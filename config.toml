@@ -65,5 +65,5 @@ publishDir = "public"
 [params.homepage.social]
   linkedin = "https://www.linkedin.com/in/kara-dietz/"
   github = "https://github.com/karadietz"
-  resume = "Kara_Dietz_Resume_F2020.pdf"
+  resume = "Kara_Dietz_Resume.pdf"
   email = "mailto:kmdietz@uwaterloo.ca"
