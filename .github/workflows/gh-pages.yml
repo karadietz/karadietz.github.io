@@ -10,38 +10,70 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: |
-          npm i -D @fullhuman/postcss-purgecss postcss@^8.1.0
-          npm install --save-dev postcss-import
-          npm install -g postcss postcss-cli
-          npm install -g autoprefixer
-          npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
-          npm install -g @tailwindcss/typography
-
+          submodules: recursive  # Fetch the Docsy theme
+          fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.91.2'
           extended: true
 
-      - name: Build
-        run: hugo --minify
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+      - run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/master'
+        if: ${{ github.ref == 'refs/heads/master' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+      #       - uses: actions/checkout@v2
+      #         with:
+      #           submodules: true  # Fetch Hugo themes (true OR recursive)
+      #           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+      # 
+      #       - name: Setup Node
+      #         uses: actions/setup-node@v2
+      #         with:
+      #           node-version: '14'
+      # 
+      #       - name: Install dependencies
+      #         run: |
+      #           npm i -D @fullhuman/postcss-purgecss postcss@^8.1.0
+      #           npm install --save-dev postcss-import
+      #           npm install -g postcss postcss-cli
+      #           npm install -g autoprefixer
+      #           npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+      #           npm install -g @tailwindcss/typography
+      # 
+      # 
+      #       - name: Setup Hugo
+      #         uses: peaceiris/actions-hugo@v2
+      #         with:
+      #           hugo-version: 'latest'
+      #           extended: true
+      # 
+      #       - name: Build
+      #         run: hugo --minify
+      # 
+      #       - name: Deploy
+      #         uses: peaceiris/actions-gh-pages@v3
+      #         if: github.ref == 'refs/heads/master'
+      #         with:
+      #           github_token: ${{ secrets.GITHUB_TOKEN }}
+      #           publish_dir: ./public
