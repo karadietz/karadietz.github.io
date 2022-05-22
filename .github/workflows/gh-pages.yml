@@ -22,8 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install postcss -D
-          npm install -g postcss-cli
+          npm install -g postcss postcss-cli
           npm install -g autoprefixer
 
       - name: Setup Hugo
