@@ -27,6 +27,7 @@ jobs:
           npm install -g postcss postcss-cli
           npm install -g autoprefixer
           npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+          npm install -g @tailwindcss/typography
 
 
       - name: Setup Hugo
