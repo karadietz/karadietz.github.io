@@ -22,6 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          npm i -D @fullhuman/postcss-purgecss postcss
           npm install -g postcss postcss-cli
           npm install -g autoprefixer
 
