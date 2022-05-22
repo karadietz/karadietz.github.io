@@ -26,6 +26,8 @@ jobs:
           npm install --save-dev postcss-import
           npm install -g postcss postcss-cli
           npm install -g autoprefixer
+          npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
