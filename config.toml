@@ -1,6 +1,6 @@
 baseURL = "https://karadietz.github.io/"
 languageCode = "en-us"
-title = "Kara Dietz"
+title = ""
 theme = "show"
 publishDir = "public"
 
@@ -16,7 +16,7 @@ publishDir = "public"
   favicon = "favicon.ico"
 
 [params.homepage]
-  title = "Hey 👋 I'm Kara Dietz"
+  title = "Hey 👋 I'm Kara"
   # tagline = "UX Designer and Product Lead"
   description = "I'm a fourth year Software Engineering Student at the University of Waterloo."
   description2 = "I specialize in backend and infrastructure software engineering, and am constantly on the lookout for new opportunities to grow my experiences and meet new people. Connect with me!"
