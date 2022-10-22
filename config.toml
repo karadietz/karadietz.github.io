@@ -18,8 +18,8 @@ publishDir = "public"
 [params.homepage]
   title = "Hey 👋 I'm Kara"
   # tagline = "UX Designer and Product Lead"
-  description = "I'm a fourth year Software Engineering Student at the University of Waterloo."
-  description2 = "I specialize in backend and infrastructure software engineering, and am constantly on the lookout for new opportunities to grow my experiences and meet new people. Connect with me!"
+  description = "I'm a fourth year Software Engineering Student at the University of Waterloo with an anticipated graduation date of April 2023. I am also pursuing a Diploma in Environmental Sustainability to educate myself about important global issues. I have always been very conscious of environmental sustainability and would eventually love to contribute my skills to solve problems in this realm, including climate change."
+  description2 = "I specialize in backend and infrastructure software engineering, and am currently seeking New Grad Software Engineer opportunities for 2023. Connect with me!"
   # contact = "https://twitter.com/"
 
 [[params.homepage.projects]]
